@@ -10,5 +10,5 @@ ME-TRPO is a deep model-based reinforcement learning algorithm that uses neural 
 3) Put this folder inside `rllab/sandbox/thanard/me-trpo` folder.
 4) run `python run_model_based_rl.py trpo -env swimmer`.
 
-## Exercise
-1) Try changing `swimmer` to `snake` and `half-cheetah`.
+## Notes
+1) Environments `swimmer`, `snake`, `half-cheetah`, and `hopper` should work robustly and converge quickly.
