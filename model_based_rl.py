@@ -477,6 +477,8 @@ def train_models(env,
             policy_validation_reset_init.append(reset_init)
         policy_validation_init = np.array(policy_validation_init)
         policy_validation_reset_init = np.array(policy_validation_reset_init)
+        os.makedirs(os.path.dirname(vip), exist_ok=True)
+        os.makedirs(os.path.dirname(vrip), exist_ok=True)
         with open(vip, 'wb') as f:
             pickle.dump(policy_validation_init, f)
         logger.info('Created %s contains policy validation initial state data.' % vip)

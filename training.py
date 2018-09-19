@@ -374,15 +374,7 @@ def train(variant):
         kwargs['inner_env'] = inner_env
         kwargs['algo_name'] = params['algo']
         kwargs['logstd'] = training_policy._l_std_param.param
-
-        policy_in = tf.placeholder(tf.float32, shape=(None, n_obs), name='policy_in_test')
-        policy_out = policy_model(policy_in)
-        for obs in [np.zeros(n_obs), np.ones(n_obs), np.random.uniform(size=n_obs)]:
-            print(sess.run(policy_out, feed_dict={policy_in: obs[None]}))
-            print(training_policy.get_action(obs)[1]['mean'])
-            # print(policy.get_action(obs)[1]['mean'])
-
-        # data['policy'] = training_policy
+        # Save initial policy
         joblib.dump(training_policy, os.path.join(snapshot_dir, 'params-initial.pkl'))
 
         train_models(env=env,
@@ -406,7 +398,6 @@ def train(variant):
                      **kwargs) # Make sure not to reinitialize TRPO policy.
 
         # Save the final policy
-        # data['policy'] = training_policy
         joblib.dump(training_policy, os.path.join(snapshot_dir, 'params.pkl'))
 
     except Exception as e:
