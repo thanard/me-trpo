@@ -11,4 +11,5 @@ ME-TRPO is a deep model-based reinforcement learning algorithm that uses neural 
 4) run `python run_model_based_rl.py trpo -env swimmer`.
 
 ## Notes
-1) Environments `swimmer`, `snake`, `half-cheetah`, and `hopper` should work robustly and converge quickly.
+1) Environments: `swimmer`, `snake`, `half-cheetah`, and `hopper` work reliably and converge quickly (in order of hours). `ant` and `humanoid` takes a couple days on a single GPU and are not as reliable.
+2) Algorithms:`trpo` works better than `vpg` which works better than `bptt`.
