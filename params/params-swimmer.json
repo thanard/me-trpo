@@ -107,5 +107,5 @@
         "max_timestep": 200,
         "render_every": null,
         "load_rollout_data": false
-    },
+    }
 }
