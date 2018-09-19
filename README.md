@@ -5,5 +5,5 @@ ME-TRPO is a deep model-based reinforcement learning algorithm that uses neural 
 
 ## Set-up
 1) Install [rllab](https://github.com/rll/rllab).
-2) Put this folder inside `rllab/sandbox/me-trpo` folder.
+2) Put this folder inside `rllab/sandbox/thanard/me-trpo` folder.
 3) run `python run_model_based_rl.py trpo -env half-cheetah`.
