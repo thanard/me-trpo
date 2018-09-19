@@ -333,10 +333,6 @@ def train(variant):
         kwargs['input_rms'] = input_rms
         kwargs['diff_rms'] = diff_rms
         kwargs['mode'] = variant['mode']
-        if params['trpo_init_ratio'] == 0.0 or params['trpo_init_ratio'] is None:
-            careful_init = False
-        else:
-            careful_init = True
 
         if params['algo'] == 'vpg':
             from rllab.baselines.linear_feature_baseline import LinearFeatureBaseline
@@ -387,7 +383,7 @@ def train(variant):
             # print(policy.get_action(obs)[1]['mean'])
 
         # data['policy'] = training_policy
-        joblib.dump(training_policy, os.path.join(snapshot_dir, 'params-initial-%.1f.pkl'%params['trpo_init_ratio']))
+        joblib.dump(training_policy, os.path.join(snapshot_dir, 'params-initial.pkl'))
 
         train_models(env=env,
                      dynamics_model=dynamics_model,
@@ -405,7 +401,6 @@ def train(variant):
                      sweep_iters=params['sweep_iters'],
                      sample_size=params['sample_size'],
                      verbose=False,
-                     careful_init=careful_init,
                      variant=variant,
                      saved_policy=training_policy,
                      **kwargs) # Make sure not to reinitialize TRPO policy.

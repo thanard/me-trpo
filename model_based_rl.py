@@ -244,7 +244,6 @@ def train_models(env,
                  sweep_iters=10,
                  sample_size=1000,
                  verbose=False,
-                 careful_init=False,
                  variant={},
                  **kwargs
                  ):
@@ -409,25 +408,10 @@ def train_models(env,
     '''
     Prepare variables and data for learning
     '''
-    if careful_init:
-        all_vars = []
-        policy_vars = tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope=policy_scope)
-        try:
-            sess.run(policy_vars)
-            logger.info('Do not re-initialize policy.')
-        except tf.errors.FailedPreconditionError:
-            # We don't want to reinitialize the policy if it has been initialized.
-            all_vars.extend(policy_vars)
-            logger.info('Re-initialize policy.')
-        for scope in model_scopes:
-            all_vars.extend(tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope=scope))
-        network_init = tf.variables_initializer(all_vars)
-        sess.run([policy_adam_init, network_init] + dynamics_adam_init)
-    else:
-        # Initialize all variables
-        init_op = tf.global_variables_initializer()
-        sess.run(init_op)
-        logger.info('Re-initialize policy.')
+    # Initialize all variables
+    init_op = tf.global_variables_initializer()
+    sess.run(init_op)
+    logger.info('Re-initialize policy.')
 
     '''
     Policy weights
