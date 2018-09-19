@@ -1,0 +1,112 @@
+{
+    "algo": "bptt",
+    "_comment_algo":["bptt, trpo, or svg"],
+    "env": "point2D",
+    "policy":{
+        "hidden_layers": [
+            16,
+            16
+        ],
+        "output_nonlinearity": "tf.identity",
+        "_comment_policy": [
+            "Hidden layers need to match the policy in trpo_path."
+        ]
+    },
+    "n_models": 5,
+    "sample_size": 500,
+    "sweep_iters": 50,
+
+    "dynamics_model": {
+        "hidden_layers": [
+            128,
+            128
+        ],
+        "regularization":{
+            "method": "tf.nn.l2_loss",
+            "constant": 0.00
+
+        },
+        "nonlinearity": [
+            "tf.nn.relu",
+            "tf.nn.relu"
+        ],
+        "ignore_xy_input": false,
+        "prediction_type": "state_change",
+        "_comments_pt": []
+    },
+
+    "dynamics_opt_params": {
+        "learning_rate": {"scratch":1e-3, "refine":1e-3},
+        "log_every": 5,
+        "max_passes": 2000,
+        "stop_critereon": {
+            "offset": 1e-05,
+            "threshold": 0.10,
+            "_comment": ["out-of-date. use nit instead."]
+        },
+        "batch_size": 100,
+        "sample_mode": "random",
+        "reinitialize": false,
+        "num_passes_threshold": 25
+    },
+    "_comments_sm": ["next_batch or random"],
+    "_comments_nit": ["If there is no update made in last n steps, we break."],
+    "policy_opt_params": {
+        "mode": "estimated",
+        "whole": true,
+        "T": 10,
+        "gamma": 1.00,
+        "grad_norm_clipping": 10,
+        "learning_rate": 1e-3,
+        "log_every": 5,
+        "num_iters_threshold": 25,
+        "max_iters": 400,
+        "oracle_maxtimestep": 10,
+        "stop_critereon": {
+            "offset": 1e-05,
+            "threshold": 0.10,
+            "percent_models_threshold": 0.30
+        },
+        "validation_init_path": "data_upload/policy_validation_inits_point2D_rllab.save",
+        "validation_reset_init_path": "data_upload/policy_validation_inits_point2D_rllab.save",
+        "trpo":{
+            "init_std": 1.0,
+            "step_size": 0.01,
+            "discount": 1.00,
+            "batch_size": 50000,
+            "reset": true
+        },
+        "vpg":{
+            "init_std": 1.0,
+            "discount": 1.00,
+            "batch_size": 50000,
+            "reset": true
+        },
+        "batch_size": 8,
+        "sam_mode": "step_rand"
+    },
+
+    "_comment_rp": [
+        "Splitting mode choose trajectory or triplet",
+        "param_noise std will be the latest param update times param_noise.",
+        "action_noise std will vary from 0 to constant."
+    ],
+    "rollout_params": {
+        "training_data_size": 200000,
+        "validation_data_size": 100000,
+        "split_ratio": 0.3,
+        "splitting_mode":"trajectory",
+        "use_same_dataset": true,
+        "exploration": {
+            "initial_param_std": 0.0,
+            "param_noise": 1.0,
+            "action_noise": 1.0,
+            "vary_trajectory_noise":false
+        },
+        "datapath": "",
+        "is_monitored": false,
+        "max_timestep": 10,
+        "render_every": null,
+        "load_rollout_data": false
+    }
+}
