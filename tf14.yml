@@ -1,0 +1,209 @@
+name: tf14
+channels:
+- jjhelmus
+- soumith
+- menpo
+- kne
+- defaults
+dependencies:
+- boto=2.48.0=py35_0
+- cffi=1.10.0=py35_0
+- click=6.6=py35_0
+- cycler=0.10.0=py35_0
+- dbus=1.10.10=0
+- decorator=4.0.10=py35_0
+- entrypoints=0.2.2=py35_0
+- expat=2.1.0=0
+- flask=0.11.1=py35_0
+- fontconfig=2.12.1=3
+- freetype=2.5.5=1
+- glib=2.43.0=1
+- gst-plugins-base=1.8.0=0
+- gstreamer=1.8.0=0
+- h5py=2.7.0=np112py35_0
+- hdf5=1.8.17=1
+- icu=54.1=0
+- ipykernel=4.5.0=py35_0
+- ipython=5.1.0=py35_0
+- ipython_genutils=0.1.0=py35_0
+- itsdangerous=0.24=py35_0
+- jbig=2.1=0
+- jinja2=2.8=py35_1
+- jpeg=9b=0
+- jsonschema=2.5.1=py35_0
+- jupyter_client=4.4.0=py35_0
+- jupyter_core=4.2.0=py35_0
+- libffi=3.2.1=0
+- libgcc=5.2.0=0
+- libgfortran=3.0.0=1
+- libgpuarray=0.6.2=0
+- libiconv=1.14=0
+- libpng=1.6.27=0
+- libsodium=1.0.10=0
+- libtiff=4.0.6=3
+- libxcb=1.12=0
+- libxml2=2.9.2=0
+- llvmlite=0.16.0=py35_0
+- mako=1.0.4=py35_0
+- markupsafe=0.23=py35_2
+- matplotlib=2.0.2=np112py35_0
+- mistune=0.7.3=py35_0
+- mkl=2017.0.1=0
+- mkl-service=1.1.2=py35_3
+- mock=2.0.0=py35_0
+- nbconvert=4.2.0=py35_0
+- nbformat=4.1.0=py35_0
+- networkx=1.11=py35_0
+- nomkl=1.0=0
+- notebook=4.2.3=py35_0
+- numba=0.31.0=np112py35_0
+- numexpr=2.6.2=np112py35_nomkl_0
+- numpy=1.12.1=py35_nomkl_0
+- olefile=0.44=py35_0
+- openblas=0.2.19=0
+- openssl=1.0.2j=0
+- pandas=0.20.1=np112py35_0
+- path.py=8.2.1=py35_0
+- pbr=1.10.0=py35_0
+- pexpect=4.0.1=py35_0
+- pickleshare=0.7.4=py35_0
+- pillow=4.2.1=py35_0
+- pip=9.0.1=py35_1
+- prompt_toolkit=1.0.3=py35_0
+- ptyprocess=0.5.1=py35_0
+- pycparser=2.18=py35_0
+- pygments=2.1.3=py35_0
+- pygpu=0.6.2=py35_0
+- pyparsing=2.1.4=py35_0
+- pyqt=5.6.0=py35_2
+- python=3.5.2=0
+- python-dateutil=2.5.3=py35_0
+- pytz=2016.7=py35_0
+- pyzmq=15.4.0=py35_0
+- qt=5.6.2=5
+- readline=6.2=2
+- scikit-learn=0.18.1=np112py35_nomkl_1
+- scipy=0.19.0=np112py35_nomkl_0
+- seaborn=0.7.1=py35_0
+- setuptools=27.2.0=py35_0
+- simplegeneric=0.8.1=py35_1
+- sip=4.18=py35_0
+- six=1.10.0=py35_0
+- sqlite=3.13.0=0
+- terminado=0.6=py35_0
+- tk=8.5.18=0
+- tornado=4.4.2=py35_0
+- traitlets=4.3.1=py35_0
+- wcwidth=0.1.7=py35_0
+- werkzeug=0.11.11=py35_0
+- wheel=0.29.0=py35_0
+- xz=5.2.2=0
+- zeromq=4.1.4=0
+- zlib=1.2.8=3
+- protobuf=3.0.0b2=py35_1
+- pybox2d=2.3.1post2=py35_0
+- pygame=1.9.2a0=py35_0
+- ipywidgets=5.1.5=py35_0
+- joblib=0.10.3=py35_0
+- opencv3=3.1.0=py35_0
+- widgetsnbextension=1.2.3=py35_1
+- cuda80=1.0=0
+- pytorch=0.2.0=py35hb1547bd_4cu80
+- pip:
+  - appdirs==1.4.3
+  - astar==0.9
+  - atari-py==0.1.1
+  - awscli==1.11.190
+  - azure==1.0.3
+  - azure-common==1.1.8
+  - azure-mgmt==0.20.2
+  - azure-mgmt-common==0.20.0
+  - azure-mgmt-compute==0.20.1
+  - azure-mgmt-network==0.20.1
+  - azure-mgmt-nspkg==2.0.0
+  - azure-mgmt-resource==0.20.1
+  - azure-mgmt-storage==0.20.0
+  - azure-nspkg==2.0.0
+  - azure-servicebus==0.20.1
+  - azure-servicemanagement-legacy==0.20.2
+  - azure-storage==0.20.3
+  - bleach==1.5.0
+  - boltons==18.0.0
+  - boto3==1.4.4
+  - botocore==1.7.48
+  - box2d==2.3.1
+  - box2d-kengz==2.3.3
+  - cached-property==1.3.0
+  - cloudpickle==0.5.2
+  - colorama==0.3.7
+  - colored-traceback==0.2.2
+  - colorlover==0.2.1
+  - cython==0.26.1
+  - dill==0.2.7.1
+  - docutils==0.14
+  - enum34==1.1.6
+  - flatbuffers==2015.12.22.1
+  - funcsigs==1.0.2
+  - glfw==1.4.0
+  - gym (/home/thanard/anaconda3/envs/tf14/lib/python3.5/site-packages)==0.8.0
+  - html5lib==0.9999999
+  - imageio==2.2.0
+  - ipdb==0.10.3
+  - ipython-genutils==0.1.0
+  - japronto==0.1.1
+  - jmespath==0.9.3
+  - jupyter-client==4.4.0
+  - jupyter-core==4.2.0
+  - keras==2.0.8
+  - lasagne==0.2.dev1
+  - markdown==2.6.11
+  - ml-logger==0.0.23
+  - moleskin==1.5.1
+  - mpi4py==2.0.0
+  - mujoco-py==0.5.7
+  - opencv-python==3.2.0.6
+  - pachi-py==0.0.21
+  - packaging==16.8
+  - params-proto==2.3.0
+  - plotly==2.0.7
+  - pprint==0.1
+  - progressbar2==3.34.2
+  - prompt-toolkit==1.0.3
+  - psutil==5.4.3
+  - py==1.4.33
+  - pyasn1==0.3.7
+  - pycairo==1.15.5
+  - pyglet==1.2.4
+  - pyopengl==3.1.0
+  - pyprind==2.10.0
+  - pytest==3.0.7
+  - python-utils==2.2.0
+  - pytools==2016.2.6
+  - pyyaml==3.12
+  - ray==0.3.0
+  - redis==2.10.6
+  - requests==2.13.0
+  - rsa==3.4.2
+  - s3transfer==0.1.11
+  - style==1.1.0
+  - tensorboard-logger==0.0.4
+  - tensorflow==1.4.1
+  - tensorflow-gpu==1.4.1
+  - tensorflow-tensorboard==0.4.0rc3
+  - termcolor==1.1.0
+  - tf-logger==1.0.2
+  - theano==0.9.0.dev1
+  - torch==0.4.0a0+67494ce
+  - torch-helpers==0.4.3
+  - torchfile==0.1.0
+  - torchvision==0.2.0
+  - tqdm==4.15.0
+  - typing==3.6.4
+  - unpyclib==0.8.1
+  - update==0.0.1
+  - uvloop==0.8.1
+  - visdom==0.1.7
+  - waterbear==2.5.0
+  - zmq==0.0.0
+prefix: /home/thanard/anaconda3/envs/tf14
+
