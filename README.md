@@ -8,4 +8,7 @@ ME-TRPO is a deep model-based reinforcement learning algorithm that uses neural 
 2) Create a python environment and install dependencies `conda env create -f tf14.yml`.
    > Activate the environment `source activate tf14`.
 3) Put this folder inside `rllab/sandbox/thanard/me-trpo` folder.
-4) run `python run_model_based_rl.py trpo -env half-cheetah`.
+4) run `python run_model_based_rl.py trpo -env swimmer`.
+
+## Notes
+1) Environments `swimmer`, `snake`, `half-cheetah`, and `hopper` should work robustly and converge quickly.
