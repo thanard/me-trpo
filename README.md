@@ -17,4 +17,4 @@ ME-TRPO is a deep model-based reinforcement learning algorithm that uses neural 
 
 ## Logging
 1) `progress.csv` contains `real_current_validation_cost` which is the negative of the reward so far.
-2) `info.log` contains the full logs of data collection, dynamics model optimization, and policy optimization. Note that we are minimizing the proxy cost, `estim_validation_cost`. The true cost is shown as `real_validation_cost`, but unseen to the optimizer.
+2) `info.log` contains the full logs of data collection, dynamics model optimization, and policy optimization. Note that we are minimizing the proxy cost, `estim_validation_cost`. The true cost is shown as `real_validation_cost`, but unseen to the TRPO optimizer.
