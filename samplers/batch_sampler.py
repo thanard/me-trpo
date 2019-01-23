@@ -1,4 +1,4 @@
-from rllab.sampler.base import BaseSampler
+from samplers.base import BaseSampler
 from rllab.sampler import parallel_sampler
 from rllab.sampler.stateful_pool import singleton_pool
 import tensorflow as tf
