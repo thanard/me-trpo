@@ -16,6 +16,6 @@ ME-TRPO is a deep model-based reinforcement learning algorithm that uses neural 
 3) To run `snake`, put `vendor/mujoco_models/snake.xml` under `rllab/vendor/mujoco_models`
 
 ## Logging
-1) The folder is saved in `data/local/ENVNAME/ENVNAME_DATETIME_0001` when without ec2(by default).
+1) The folder is saved in `data/local/ENVNAME/ENVNAME_DATETIME_0001` when running without ec2(by default).
 2) `progress.csv` contains `real_current_validation_cost` which is the negative of the reward so far.
 3) `info.log` contains the full logs of data collection, dynamics model optimization, and policy optimization. Note that we are minimizing the proxy cost, `estim_validation_cost`. The true cost is shown as `real_validation_cost`, but unseen to the policy optimizer.
