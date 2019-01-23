@@ -169,7 +169,7 @@ class BaseSampler(Sampler):
 
         # logger.record_tabular('Iteration', itr)
         # logger.record_tabular('AverageDiscountedReturn',
-                              average_discounted_return)
+        #                        average_discounted_return)
         # logger.record_tabular('AverageReturn', np.mean(undiscounted_returns))
         # logger.record_tabular('ExplainedVariance', ev)
         # logger.record_tabular('NumTrajs', len(paths))
