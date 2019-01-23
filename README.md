@@ -14,3 +14,6 @@ ME-TRPO is a deep model-based reinforcement learning algorithm that uses neural 
 1) Environments: `swimmer`, `snake`, `half-cheetah`, and `hopper` work reliably and converge quickly (in order of hours). `ant` and `humanoid` takes a couple days on a single GPU and are not as reliable.
 2) Algorithms:`trpo` works better than `vpg` which works better than `bptt`.
 3) To run `snake`, put `vendor/mujoco_models/snake.xml` under `rllab/vendor/mujoco_models`
+
+## Logging
+1) `progress.csv` contains `real_current_validation_cost` which is the negative of the reward so far.
