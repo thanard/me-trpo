@@ -447,8 +447,8 @@ def sample_trajectories(env,
             min_eps_reward = episode_reward
 
     avg_eps_reward /= len(Os)
-    rllab_logger.record_tabular('EpisodesSoFar', len(Os))
-    rllab_logger.record_tabular('TimeStepsSoFar', _counter - 1)
+    rllab_logger.record_tabular('EpisodesCollected', len(Os))
+    rllab_logger.record_tabular('TimeStepsCollected', _counter - 1)
     return Os, As, Rs, {'avg_eps_reward': avg_eps_reward,
                         'min_eps_reward': min_eps_reward,
                         'max_eps_reward': max_eps_reward}
